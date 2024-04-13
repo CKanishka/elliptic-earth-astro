@@ -6,6 +6,7 @@ const pageTitle = "Home page";
 
 // Component Imports
 import Counter from "../components/Counter";
+import Greeting from "../components/Greeting";
 const someProps = {
   count: 0,
 };
@@ -18,4 +19,5 @@ const someProps = {
   <Counter {...someProps} client:visible>
     <h1>Hello, React!</h1>
   </Counter>
+  <Greeting messages={["Hi", "Hello", "Howdy", "Hey there"]} client:load />
 </BaseLayout>
