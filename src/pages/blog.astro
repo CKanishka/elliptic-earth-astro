@@ -1,4 +1,6 @@
 ---
+import "../styles/global.css";
+
 const pageTitle = "My blog";
 ---
 
@@ -9,16 +11,6 @@ const pageTitle = "My blog";
     <meta name="generator" content={Astro.generator} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{pageTitle}</title>
-    <style>
-      html,
-      body {
-        font-family: system-ui;
-        margin: 0;
-      }
-      body {
-        padding: 2rem;
-      }
-    </style>
   </head>
   <body>
     <a href="/">Home</a>
