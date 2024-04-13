@@ -1,5 +1,15 @@
 ---
 const pageTitle = "About Me";
+
+const identity = {
+  name: "Kanishka Chowdhury",
+  country: "India",
+  occupation: "Software Engineer",
+};
+
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
+const skillColor = "navy";
+const skillTransform = "uppercase";
 ---
 
 <html lang="en">
@@ -9,14 +19,16 @@ const pageTitle = "About Me";
     <meta name="generator" content={Astro.generator} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{pageTitle}</title>
-    <style>
-      html,
-      body {
-        font-family: system-ui;
-        margin: 0;
+    <style define:vars={{ skillColor, skillTransform }}>
+      h1 {
+        color: purple;
+        font-size: 4rem;
       }
-      body {
-        padding: 2rem;
+
+      .skill {
+        color: var(--skillColor);
+        font-weight: bold;
+        text-transform: var(--skillTransform);
       }
     </style>
   </head>
@@ -37,5 +49,16 @@ const pageTitle = "About Me";
       This site will update as I complete more of the tutorial, so keep checking
       back and see how my journey is going!
     </p>
+
+    <p>Few facts about me:</p>
+    <ul>
+      <li>I am {identity.name} from {identity.country}</li>
+      <li>I work as a {identity.occupation}</li>
+    </ul>
+
+    <p>My skills are:</p>
+    <ul>
+      {skills.map((skill) => <li class="skill">{skill}</li>)}
+    </ul>
   </body>
 </html>
