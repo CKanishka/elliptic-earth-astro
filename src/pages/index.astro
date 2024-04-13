@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import Navigation from "../components/Navigation.astro";
 
 const pageTitle = "Home page";
 
@@ -22,9 +23,7 @@ const someProps = {
     <title>{pageTitle}</title>
   </head>
   <body>
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/blog/">Blog</a>
+    <Navigation />
     <main>
       <Counter {...someProps} client:visible>
         <h1>Hello, React!</h1>
