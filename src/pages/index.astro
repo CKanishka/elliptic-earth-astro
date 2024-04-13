@@ -6,6 +6,7 @@ const pageTitle = "Home page";
 
 // Component Imports
 import Counter from "../components/Counter";
+import Footer from "../components/Footer.astro";
 const someProps = {
   count: 0,
 };
@@ -30,4 +31,8 @@ const someProps = {
       </Counter>
     </main>
   </body>
+  <Footer />
+  <script>
+    import "../scripts/menu.js";
+  </script>
 </html>
