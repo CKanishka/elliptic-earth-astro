@@ -1,4 +1,6 @@
 ---
+const pageTitle = "Home page";
+
 // Component Imports
 import Counter from "../components/Counter";
 const someProps = {
@@ -15,6 +17,7 @@ const someProps = {
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{pageTitle}</title>
     <style>
       html,
       body {
